@@ -1,0 +1,2 @@
+In ogni cartella relativa a un esercizio sono presenti sia la cartella Debug che Build, contenenti praticamente gli stessi file (oltre al file output.txt generato dal comando g++, che ho provato a usare comunque, visto che si tratta ancora di programmi senza troppi file all'interno).
+Questo perché ho provato sia con il metodo fornito dall'esercitatrice che con quello inviato dal professor Ciccuttin. 
