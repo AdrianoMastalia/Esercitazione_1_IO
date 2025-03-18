@@ -56,6 +56,7 @@ public:
 	
 	/* now we define the *= and * operators between complex numbers, 
 	in a similar way to the sum operators */
+
 	complex_number& operator*=(const complex_number& other) {
         T a = real_part;
         T b = im_part;
