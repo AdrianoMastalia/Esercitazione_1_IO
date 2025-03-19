@@ -1,34 +1,32 @@
 #include<iostream>
 #include<fstream>
-using namespace std;
-int sum_of_squares(int N){
+
+unsigned int sum_of_squares(const unsigned int &N){ 
+/*cosi è una chiamata per referenza, migliore in termini di memoria*/
 	int sum;
-	sum = (N*(N+1)*(2*N+1)/6);
+	sum = (N*(N+1)*(2*N+1)/6.0);
 	return sum;
 }
 int main(void){
 	std::ifstream infile("data.txt");
-	if(infile.fail()){
+	if(infile.fail())
+	{
 		std::cerr<<"Errore nell'apertura del file"<<std::endl;
+		return 1;
 	}
 	std::string header;
 	std::getline(infile,header);
 	int sum = 0;
-	int val;
-	int N;
+	unsigned int val; /*così viene raddoppiato il numero di interi positivi che posso memorizzare */
 	int count = 0;
-	std::cout<<"Inserisci il numero fino al quale vuoi fare la somma"<<std::endl;
-	std::cin >> N;
 	count = 0;
 	while(infile>>val)
-		if(count<N){
-			sum = sum + val*val;
-			count++;
-		}
-		else
-			break;
-	std::cout<<sum<<std::endl;
-	int exact_value = sum_of_squares(N);
-	std::cout<<exact_value<<std::endl;
+	{		/* se avessi usato getline, avrei avuto anche la stringa vuota */
+		sum += val*val; /*non usare pow perché è più costoso*/
+		count++;
+	}
+	std::cout << "La somma vale "<< sum << std::endl;
+	int exact_value = sum_of_squares(count);
+	std::cout << "L'output della funzione è " << exact_value << std::endl;
 	return 0;
 }
