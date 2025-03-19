@@ -216,7 +216,8 @@ CMakeFiles/MeanValue.dir/main.cpp.o: ../main.cpp \
   /usr/include/c++/11/bits/invoke.h \
   /usr/include/c++/11/bits/quoted_string.h \
   /usr/include/c++/11/sstream \
-  /usr/include/c++/11/bits/sstream.tcc
+  /usr/include/c++/11/bits/sstream.tcc \
+  ../map_point.hpp
 
 
 /usr/include/c++/11/sstream:
@@ -378,6 +379,8 @@ CMakeFiles/MeanValue.dir/main.cpp.o: ../main.cpp \
 /usr/include/c++/11/bits/stl_tempbuf.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/__FILE.h:
+
+../map_point.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/types/clock_t.h:
 

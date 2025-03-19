@@ -24,9 +24,8 @@ int main()
 	fileout<<"# N mean"<<"\n";
 	while(filein>>val){
 		sum += map_point(val); /* Updating the sum with the values mapped in [-1,2] */
-		mean = sum/i; /* Calculation of the mean */
+		fileout<<scientific<<setprecision(16)<<sum/i<<"\n";
 		i++;
-		fileout<<scientific<<setprecision(16)<<mean<<"\n";
 	}
 	fileout.close();
     return 0;
