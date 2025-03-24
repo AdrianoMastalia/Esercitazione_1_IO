@@ -16,7 +16,7 @@ int main()
 	double mean; 
 	double sum = 0;
 	int i = 1;
-	ofstream fileout("output.txt");
+	ofstream fileout("result.txt");
 	if(fileout.fail())
 	{
 		cout<<"Errore nell'apertura del file di output"<<endl;
@@ -24,7 +24,7 @@ int main()
 	fileout<<"# N mean"<<"\n";
 	while(filein>>val){
 		sum += map_point(val); /* Updating the sum with the values mapped in [-1,2] */
-		fileout<<scientific<<setprecision(16)<<sum/i<<"\n";
+		fileout<<scientific<<setprecision(16)<<sum/i<<"\n"; /* printing the mean in the output file*/
 		i++;
 	}
 	fileout.close();

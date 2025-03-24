@@ -38,6 +38,7 @@ list(APPEND MeanValue_LINKED_LIBRARIES PRIVATE GTest::gmock_main)
 ################################################################################
 add_executable(${PROJECT_NAME}
     main.cpp
+    map_point.cpp
     ${MeanValue_SOURCES}
     ${MeanValue_HEADERS})
 
